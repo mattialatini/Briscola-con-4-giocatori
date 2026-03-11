@@ -1,0 +1,419 @@
+/* VARIABILI COLORE */
+/* Definizione dei colori principali utilizzati nel tema */
+* {
+    -fx-verde-tavolo:  #1e5e1e;       /* Verde principale del tavolo */
+    -fx-verde-scuro:   #0d380d;       /* Verde più scuro per dettagli */
+    -fx-oro:           #e8c87b;       /* Colore oro chiaro */
+    -fx-oro-scuro:     #c8a84b;       /* Colore oro scuro */
+    -fx-testo-chiaro:  #f5ecd4;       /* Colore testo chiaro */
+    -fx-testo-label:   #ffffff;       /* Colore base per label/testo */
+}
+
+/* LOGIN */
+/* Stile generale della schermata di login */
+.login-root {
+    -fx-background-color: linear-gradient(to bottom, #1a4a1a, #0d2b0d); /* Gradiente verde scuro */
+}
+
+/* Pannello centrale della login */
+.login-panel {
+    -fx-background-color: rgba(0, 0, 0, 0.70); /* Sfondo semitrasparente */
+    -fx-background-radius: 18;                 /* Angoli arrotondati */
+    -fx-border-color: #c8a84b;                 /* Bordo oro scuro */
+    -fx-border-width: 2;
+    -fx-border-radius: 18;
+    -fx-padding: 40 52 40 52;                  /* Spaziatura interna */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 28, 0, 0, 8); /* Ombra */
+}
+
+/* Titolo della login */
+.login-title {
+    -fx-font-family: "Georgia";                /* Font serif */
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-fill: #e8c87b;                         /* Colore oro chiaro */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 10, 0, 0, 4); /* Ombra del testo */
+}
+
+/* Sottotitolo della login */
+.login-subtitle {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 16px;
+    -fx-fill: #d4b870;                        /* Colore testo più morbido */
+    -fx-font-style: italic;                   /* Corsivo */
+}
+
+/* Label di sezione */
+.section-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8c87b;                   /* Colore oro */
+    -fx-padding: 10 0 4 0;                     /* Margine interno verticale */
+}
+
+/* Label per i campi input */
+.field-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #f0e6c8;                   /* Colore chiaro */
+    -fx-min-width: 80px;                       /* Larghezza minima */
+}
+
+/* Campi di input */
+.input-field {
+    -fx-background-color: rgba(255, 255, 255, 0.12); /* Sfondo semi-trasparente chiaro */
+    -fx-border-color: #c8a84b;                        /* Bordo oro */
+    -fx-border-width: 1.5;
+    -fx-border-radius: 7;
+    -fx-background-radius: 7;
+    -fx-text-fill: #ffffff;                            /* Testo bianco */
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.45);  /* Testo segnaposto semitrasparente */
+    -fx-font-size: 14px;
+    -fx-padding: 8 10 8 10;
+    -fx-pref-width: 180px;
+}
+
+/* Campo di input quando è selezionato */
+.input-field:focused {
+    -fx-border-color: #e8c87b;                        /* Bordo oro chiaro */
+    -fx-background-color: rgba(255, 255, 255, 0.18);  /* Sfondo leggermente più chiaro */
+}
+
+/* Label per errori */
+.error-label {
+    -fx-text-fill: #ff6b6b;                   /* Colore rosso */
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* BOTTONI */
+/* Bottone principale */
+.btn-primary {
+    -fx-background-color: linear-gradient(to bottom, #e8c87b, #c8a84b); /* Gradiente oro */
+    -fx-text-fill: #1a1a1a;                  /* Testo scuro */
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 12 28 12 28;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 3);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to bottom, #f5d890, #d4b060); /* Hover leggero */
+}
+
+.btn-primary:pressed {
+    -fx-background-color: #b89040;           /* Stato premuto */
+}
+
+.btn-primary:disabled {
+    -fx-opacity: 0.55;                        /* Bottone disabilitato */
+}
+
+/* Bottone "Pronto" */
+.btn-pronto {
+    -fx-background-color: linear-gradient(to bottom, #5dbe5d, #3a9a3a); /* Gradiente verde */
+    -fx-text-fill: #ffffff;                   /* Testo bianco */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 14 32 14 32;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 3);
+}
+
+.btn-pronto:hover   { -fx-background-color: linear-gradient(to bottom, #6ed46e, #4ab04a); }
+.btn-pronto:pressed { -fx-background-color: #2a8a2a; }
+.btn-pronto:disabled { -fx-opacity: 0.5; }
+
+/* ATTESA */
+/* Sfondo della schermata di attesa */
+.attesa-root {
+    -fx-background-color: linear-gradient(to bottom, #1a4a1a, #0d2b0d);
+}
+
+/* Pannello centrale della schermata di attesa */
+.attesa-panel {
+    -fx-background-color: rgba(0,0,0,0.65);
+    -fx-background-radius: 18;
+    -fx-border-color: #c8a84b;
+    -fx-border-width: 2;
+    -fx-border-radius: 18;
+    -fx-padding: 36 48 36 48;
+}
+
+/* Titolo nella schermata di attesa */
+.attesa-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #f0e6c8;
+}
+
+/* Testo nella schermata di attesa */
+.attesa-testo {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e0d4b8;
+}
+
+/* PLAYER CARD */
+/* Pannello della scheda giocatore */
+.player-card {
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-background-radius: 10;
+    -fx-border-color: #c8a84b88;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-padding: 14 18 14 18;
+    -fx-alignment: center;
+}
+
+/* Label nella scheda giocatore */
+.player-name-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8c87b;
+}
+
+.player-squad-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #c8d8a0;
+}
+
+.player-code-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #a0b8a0;
+}
+
+/* PARTITA */
+/* Sfondo principale della partita */
+.partita-root {
+    -fx-background-color: #1e5e1e;
+}
+
+/* Barra dell'header */
+.header-bar {
+    -fx-background-color: rgba(0,0,0,0.55);
+    -fx-padding: 10 16 10 16;
+    -fx-border-color: transparent transparent #c8a84b55 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-min-height: 48px;
+}
+
+/* Label nella barra dell'header */
+.briscola-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.turno-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8c87b;
+}
+
+.punteggio-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #c8f0c8;
+}
+
+/* Titolo del tavolo */
+.tavolo-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8c87b;
+    -fx-padding: 0 0 4 0;
+}
+
+/* Area del tavolo */
+.tavolo-area {
+    -fx-background-color: rgba(0, 80, 0, 0.45);
+    -fx-background-radius: 14;
+    -fx-border-color: #2a7a2a;
+    -fx-border-width: 2;
+    -fx-border-radius: 14;
+    -fx-padding: 14;
+    -fx-min-height: 160px;
+}
+
+/* LOG */
+/* Titolo della sezione log */
+.log-title {
+    -fx-text-fill: #c8a84b;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* Area di log */
+.log-area {
+    -fx-control-inner-background: rgba(0, 0, 0, 0.65);
+    -fx-text-fill: #d4f0d4;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
+    -fx-border-color: #3a7a3a;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-family: "Consolas", "Monospaced";
+}
+
+.log-area .content { -fx-background-color: rgba(0,0,0,0.65); }
+.log-area .scroll-bar { -fx-background-color: transparent; }
+
+/* PANNELLO GIOCATORE */
+/* Pannello giocatore laterale */
+.player-panel {
+    -fx-background-color: rgba(0,0,0,0.50);
+    -fx-background-radius: 12;
+    -fx-border-color: #3a7a3a;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 12;
+}
+
+/* Nome giocatore nel pannello */
+.player-panel-name {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8c87b;
+}
+
+/* Label quando la mano è vuota */
+.empty-hand-label {
+    -fx-text-fill: #888888;
+    -fx-font-size: 18px;
+}
+
+/* Evidenzia il turno attivo */
+.turno-attivo {
+    -fx-background-color: rgba(200, 168, 75, 0.15);
+    -fx-border-color: #e8c87b;
+    -fx-border-width: 2.5;
+}
+
+/* CARTE */
+/* Bottone per la carta */
+.carta-btn {
+    -fx-background-color: #fffef5;
+    -fx-border-color: #bbb;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 7, 0, 0, 3);
+}
+
+.carta-btn:hover {
+    -fx-background-color: #fffde8;
+    -fx-border-color: #c8a84b;
+    -fx-translate-y: -10;
+    -fx-scale-x: 1.07;
+    -fx-scale-y: 1.07;
+}
+
+.carta-btn:pressed {
+    -fx-translate-y: -4;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.carta-btn:disabled {
+    -fx-opacity: 0.55;
+    -fx-cursor: default;
+    -fx-translate-y: 0;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+/* Carta sul tavolo */
+.carta-tavolo {
+    -fx-background-color: #fffef5;
+    -fx-border-color: #aaa;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 5, 0, 0, 2);
+}
+
+/* COLORI SEMI */
+/* Colori per i semi delle carte */
+.seme-denari  { -fx-fill: #c0392b; -fx-text-fill: #c0392b; }
+.seme-coppe   { -fx-fill: #2471a3; -fx-text-fill: #2471a3; }
+.seme-bastoni { -fx-fill: #1e8449; -fx-text-fill: #1e8449; }
+.seme-spade   { -fx-fill: #1a1a1a; -fx-text-fill: #1a1a1a; }
+
+/* NOTIFICHE / POPUP */
+/* Overlay per le notifiche */
+.notifica-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* Box della notifica */
+.notifica-box {
+    -fx-background-color: rgba(15, 40, 15, 0.97);
+    -fx-background-radius: 16;
+    -fx-border-color: #c8a84b;
+    -fx-border-width: 2;
+    -fx-border-radius: 16;
+    -fx-padding: 28 36 28 36;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 20, 0, 0, 6);
+}
+
+/* Titolo della notifica */
+.notifica-titolo {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-fill: #e8c87b;
+}
+
+/* Testo della notifica */
+.notifica-testo {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e0d8c0;
+    -fx-wrap-text: true;
+}
+
+/* FINE PARTITA */
+/* Sfondo della schermata di fine partita */
+.fine-root {
+    -fx-background-color: linear-gradient(to bottom, #1a4a1a, #0d2b0d);
+}
+
+/* Pannello centrale fine partita */
+.fine-panel {
+    -fx-background-color: rgba(0,0,0,0.72);
+    -fx-background-radius: 18;
+    -fx-border-color: #c8a84b;
+    -fx-border-width: 2.5;
+    -fx-border-radius: 18;
+    -fx-padding: 44 56 44 56;
+}
+
+/* Titolo della fine partita */
+.fine-titolo {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-fill: #e8c87b;
+}
+
+/* Vincitore della partita */
+.fine-vincitore {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.fine-punteggio-box {
+    -fx-padding: 10 0 10 0;
+}
+
+/* Punteggi dei giocatori */
+.fine-punteggio {
+    -fx-font-size: 16px;
+    -fx-text-fill: #d4ecd4;
+}
+
+.fine-sqA { -fx-text-fill: #90d4ff; }
+.fine-sqB { -fx-text-fill: #ffa07a; }

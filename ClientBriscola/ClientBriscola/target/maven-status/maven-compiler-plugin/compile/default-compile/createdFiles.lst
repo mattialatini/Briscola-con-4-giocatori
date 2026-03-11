@@ -1,0 +1,15 @@
+it\edu\marconipontedera\ClientBriscola\GUI\CartaTavoloView.class
+it\edu\marconipontedera\ClientBriscola\Partita.class
+it\edu\marconipontedera\ClientBriscola\GUI\FinePartitaController.class
+it\edu\marconipontedera\ClientBriscola\ClientBriscola.class
+it\edu\marconipontedera\ClientBriscola\GUI\AttesaController.class
+it\edu\marconipontedera\ClientBriscola\GUI\LoginController.class
+it\edu\marconipontedera\ClientBriscola\GUI\PartitaController$1.class
+it\edu\marconipontedera\ClientBriscola\GUI\PartitaController.class
+it\edu\marconipontedera\ClientBriscola\Carta.class
+it\edu\marconipontedera\ClientBriscola\Squadra.class
+it\edu\marconipontedera\ClientBriscola\Client.class
+it\edu\marconipontedera\ClientBriscola\GUI\CartaView.class
+it\edu\marconipontedera\ClientBriscola\Giocatore.class
+it\edu\marconipontedera\ClientBriscola\MessageHeader.class
+it\edu\marconipontedera\ClientBriscola\ClientUI.class
