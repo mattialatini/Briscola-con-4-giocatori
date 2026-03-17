@@ -33,7 +33,7 @@ public class Giocatore {
         for (int i = 0; i < carte.length; i++) {
 
             // controlla se la carta esiste e se il suo valore coincide con quello passato
-            if (carte[i] != null && carte[i].toString().equals(valoreSeme)) {
+            if (carte[i] != null && carte[i].toString().equals(valore,Seme)) {
 
                 carte[i] = null; // elimina la carta dalla mano
 
