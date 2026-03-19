@@ -58,7 +58,7 @@ public class Giocatore {
     }
 
     // Restituisce il CodiceGiocatore del giocatore
-    public String getCodiceGiocatore(){ 
+    public synchronized String getCodiceGiocatore(){ 
         return CodiceGiocatore; 
     }
 
@@ -68,17 +68,17 @@ public class Giocatore {
     }
 
     // Restituisce il NomeGiocatore del giocatore
-    public String getNomeGiocatore() { 
+    public synchronized String getNomeGiocatore() { 
         return NomeGiocatore; 
     }
 
     // Restituisce il NomeSquadra del giocatore
-    public String getNomeSquadra() { 
+    public synchronized String getNomeSquadra() { 
         return NomeSquadra; 
     }
 
     // Restituisce l'array delle carte in mano
-    public Carta[] getCarte() { 
+    public synchronized Carta[] getCarte() { 
         return carte; 
     }
 }
