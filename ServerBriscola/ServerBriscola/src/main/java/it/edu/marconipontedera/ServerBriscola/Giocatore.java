@@ -26,7 +26,7 @@ public class Giocatore {
     }
 
     // Metodo per ottenere le carte del giocatore
-    public Carta[] getCarte() {
+    public synchronized Carta[] getCarte() {
         return carte;
     }
 
@@ -36,7 +36,7 @@ public class Giocatore {
     }
 
     // Metodo per ottenere l'oggetto PrintWriter
-    public PrintWriter getOut() {
+    public synchronized PrintWriter getOut() {
         return out; 
     }
 
@@ -51,7 +51,7 @@ public class Giocatore {
     }
 
     // Metodo per ottenere il codice del giocatore
-    public String getCodiceGiocatore() {
+    public synchronized String getCodiceGiocatore() {
         return CodiceGiocatore;
     }
 
@@ -61,7 +61,7 @@ public class Giocatore {
     }
 
     // Metodo per ottenere il nome del giocatore
-    public String getNomeGiocatore() {
+    public synchronized String getNomeGiocatore() {
         return NomeGiocatore;
     }
 
