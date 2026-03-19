@@ -113,13 +113,13 @@ public class ServerBriscola {
 
     // Getter statici
 
-    public static Giocatore[] getGiocatori(){
+    public static synchronized Giocatore[] getGiocatori(){
         return giocatori;
     } // Ritorna l'array dei giocatori
-    public static ClientHandler[] getClientHandlers() {
+    public static synchronized ClientHandler[] getClientHandlers() {
         return ClientHandlers;
     } // Ritorna l'array dei clienthandler
-    public static Partita getPartita() {
+    public static synchronized Partita getPartita() {
         return partita;
     } // Ritorna la partita in corso
 
