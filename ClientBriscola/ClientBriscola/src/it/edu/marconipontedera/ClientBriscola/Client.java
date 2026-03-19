@@ -240,7 +240,7 @@ public class Client implements Runnable {
     public Partita getPartita() {
         return partita;
     }
-    public boolean isMioTurno() {
+    public synchronized boolean isMioTurno() {
         return MioTurno;
     }
 }
