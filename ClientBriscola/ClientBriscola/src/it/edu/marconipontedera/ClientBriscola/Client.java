@@ -34,7 +34,7 @@ public class Client implements Runnable {
     }
 
     // Metodo per impostare l'interfaccia utente (UI)
-    public void setUI(ClientUI UI) {
+    public void synchronized setUI(ClientUI UI) {
         this.UI = UI;
     }
 
