@@ -19,7 +19,7 @@ public class Giocatore {
     }
 
     // Metodo che imposta le 3 carte iniziali distribuite dal server
-    public void synchronized setCarte(Carta carta1, Carta carta2, Carta carta3) {
+    public synchronized void setCarte(Carta carta1, Carta carta2, Carta carta3) {
         carte[0] = carta1; // inserisce la prima carta
         carte[1] = carta2; // inserisce la seconda carta
         carte[2] = carta3; // inserisce la terza carta
@@ -27,7 +27,7 @@ public class Giocatore {
 
     // Metodo che rimuove dalla mano una carta giocata
     // Viene chiamato dopo la conferma del server
-    public void synchronized RimuoviCarta(String valoreSeme) {
+    public synchronized void RimuoviCarta(String valoreSeme) {
 
         // scorre tutte le carte della mano
         for (int i = 0; i < carte.length; i++) {
@@ -44,7 +44,7 @@ public class Giocatore {
 
     // Metodo che aggiunge una carta pescata dal mazzo
     // La inserisce nel primo spazio libero dell'array
-    public void synchronized AggiungiCarta(Carta carta) {
+    public synchronized void AggiungiCarta(Carta carta) {
 
         // scorre tutte le posizioni dell'array
         for (int i = 0; i < carte.length; i++) {
@@ -63,7 +63,7 @@ public class Giocatore {
     }
 
     // Imposta/modifica il CodiceGiocatore del giocatore
-    public void synchronized setCodiceGiocatore(String CodiceGiocatore) { 
+    public synchronized void setCodiceGiocatore(String CodiceGiocatore) { 
         this.CodiceGiocatore = CodiceGiocatore; 
     }
 
