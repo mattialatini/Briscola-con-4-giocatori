@@ -34,7 +34,7 @@ public class Client implements Runnable {
     }
 
     // Metodo per impostare l'interfaccia utente (UI)
-    public void synchronized setUI(ClientUI UI) {
+    public synchronized void setUI(ClientUI UI) {
         this.UI = UI;
     }
 
@@ -82,7 +82,7 @@ public class Client implements Runnable {
     }
 
     // Metodo per inviare un messaggio al server
-    private void synchronized Invia(MessageHeader Message) {
+    private synchronized void Invia(MessageHeader Message) {
         if (out != null) out.println(Message.toString());  // Invia il messaggio se il writer è disponibile
     }
 
