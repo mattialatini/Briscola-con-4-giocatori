@@ -57,10 +57,10 @@ public class Partita {
     public String getCodiceGiocatoreIniziale() {
         return CodiceGiocatoreIniziale;
     }
-    public Squadra getSquadraA() {
+    public synchronized Squadra getSquadraA() {
         return squadraA;
     }
-    public Squadra getSquadraB() {
+    public synchronized Squadra getSquadraB() {
         return squadraB;
     }
     public synchronized String[] getCarteTavolo() {
