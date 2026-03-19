@@ -13,19 +13,19 @@ public class Partita {
     private int CarteGiocate; // numero di carte giocate nel turno corrente
 
     // Imposta l'inizio della partita con seme briscola e giocatore iniziale
-    public void ImpostaInizio(String CartaBriscola, String CodiceGiocatoreIniziale) {
+    public synchronized void ImpostaInizio(String CartaBriscola, String CodiceGiocatoreIniziale) {
         this.CartaBriscola = CartaBriscola;
         this.CodiceGiocatoreIniziale = CodiceGiocatoreIniziale;
         CarteGiocate = 0; // resetta il contatore delle carte giocate
     }
 
     // Imposta quale giocatore inizia il turno
-    public void ImpostaTurno(String CodiceGiocatoreIniziale) {
+    public synchronized void ImpostaTurno(String CodiceGiocatoreIniziale) {
         this.CodiceGiocatoreIniziale = CodiceGiocatoreIniziale;
     }
 
     // Aggiunge una carta al tavolo e registra il giocatore che l'ha giocata
-    public void AggiungiCartaTavolo(String CodiceGiocatore, String valoreSeme) {
+    public synchronized void AggiungiCartaTavolo(String CodiceGiocatore, String valoreSeme) {
         if (CarteGiocate < 4) { // si assicura che non vengano giocate più di 4 carte
             CarteTavolo[CarteGiocate] = valoreSeme;
             GiocatoriTavolo[CarteGiocate] = CodiceGiocatore;
@@ -34,24 +34,24 @@ public class Partita {
     }
 
     // Resetta il tavolo dopo una presa
-    public void RegistraPresa() {
+    public synchronized void RegistraPresa() {
         CarteTavolo = new String[4]; // resetta le carte sul tavolo
         GiocatoriTavolo = new String[4]; // resetta i giocatori sul tavolo
         CarteGiocate = 0; // resetta il contatore delle carte giocate
     }
 
     // Aggiorna i punteggi delle due squadre
-    public void AggiornaPunteggi(int PunteggioA, int PunteggioB) {
+    public synchronized void AggiornaPunteggi(int PunteggioA, int PunteggioB) {
         squadraA.setPunteggio(PunteggioA);
         squadraB.setPunteggio(PunteggioB);
     }
 
     // Metodi getter e setter per accedere e modificare gli attributi privati
-    public String getCartaBriscola() {
+    public synchronized String getCartaBriscola() {
         return CartaBriscola;
     }
     
-    public void setCartaBriscola(String CartaBriscola) {
+    public synchronized void setCartaBriscola(String CartaBriscola) {
         this.CartaBriscola = CartaBriscola;
     }
     public String getCodiceGiocatoreIniziale() {
@@ -63,13 +63,13 @@ public class Partita {
     public Squadra getSquadraB() {
         return squadraB;
     }
-    public String[] getCarteTavolo() {
+    public synchronized String[] getCarteTavolo() {
         return CarteTavolo;
     }
-    public String[] getGiocatoriTavolo() {
+    public synchronized String[] getGiocatoriTavolo() {
         return GiocatoriTavolo;
     }
-    public int getCarteGiocate() {
+    public synchronized int getCarteGiocate() {
         return CarteGiocate;
     }
 }
