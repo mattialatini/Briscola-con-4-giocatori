@@ -31,7 +31,7 @@ public class Giocatore {
     }
 
     // Metodo per impostare le carte del giocatore
-    public void synchronized setCarte(Carta[] carte) {
+    public synchronized void setCarte(Carta[] carte) {
         this.carte = carte;
     }
 
@@ -91,7 +91,7 @@ public class Giocatore {
     }
 
     // Metodo che rimuove una carta dalla mano del giocatore e la restituisce
-    public Carta synchronized GiocaCarta(String ValoreSeme) {
+    public synchronized Carta GiocaCarta(String ValoreSeme) {
         for (int i = 0; i < carte.length; i++) { // Ciclo attraverso tutte le carte
             if (carte[i] != null && carte[i].toString().equals(ValoreSeme)) { 
             // Trova la carta con il valore del seme specificato
@@ -104,7 +104,7 @@ public class Giocatore {
     }
 
     // Metodo che aggiunge una carta alla mano del giocatore
-    public void synchronized AggiungiCarta(Carta carta) {
+    public synchronized void AggiungiCarta(Carta carta) {
         for (int i = 0; i < carte.length; i++) { // Ciclo attraverso tutte le carte
             if (carte[i] == null) {  // Se la posizione è vuota
                 carte[i] = carta;     // Aggiunge la carta nella mano del giocatore
