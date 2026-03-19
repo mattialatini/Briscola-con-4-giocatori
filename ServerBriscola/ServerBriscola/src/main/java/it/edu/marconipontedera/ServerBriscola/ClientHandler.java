@@ -123,7 +123,7 @@ public class ClientHandler implements Runnable {
     }
 
     // Getter per l'oggetto PrintWriter (per inviare messaggi al client)
-    public PrintWriter getOut() {
+    public synchronized PrintWriter getOut() {
         return out;
     }
 
