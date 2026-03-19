@@ -82,7 +82,7 @@ public class Client implements Runnable {
     }
 
     // Metodo per inviare un messaggio al server
-    private void Invia(MessageHeader Message) {
+    private void synchronized Invia(MessageHeader Message) {
         if (out != null) out.println(Message.toString());  // Invia il messaggio se il writer è disponibile
     }
 
